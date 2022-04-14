@@ -42,6 +42,8 @@ export const mbMatchesToPact = (imposters) => {
   });
 
   pact.interactions = [...pact.interactions, ...matches.flat()];
+  console.log(`PACT_INTERACTIONS: ${JSON.stringify(pact.interactions)}`)
+  console.log(`MATCHES_FLAT: ${JSON.stringify(matches.flat())}`);
 
   writePact(pact);
 };
